@@ -54,3 +54,7 @@ refine_original = within(refine_original, {
   product_laptop = ifelse(product_category == 'Laptop', "1", "0")
   product_tablet = ifelse(product_category == 'Tablet', "1", "0")
 })
+refine_original$aname <- NULL
+refine_original$anum <- NULL
+
+write.csv(refine_original, file = "refine_clean.csv")
